@@ -1,0 +1,16 @@
+allOf:
+  - $ref: SimplePlayer.yaml
+    description: A player who can submit records.
+  - type: object
+    properties:
+      device:
+        allOf:
+          - $ref: Device.yaml
+            description: The player's device(s) used to achieve records.
+          - enum: [ Both ]
+      points:
+        type: number
+        description: The amount of leaderboard points the player has obtained.
+      rank:
+        type: number
+        description: The ranking of the player relative to all other players.

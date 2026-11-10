@@ -1,0 +1,9 @@
+type: object
+description: A minimized representation of a player, used in situations where full player information is not needed.
+properties:
+  id:
+    type: string
+    description: The player's UUID.
+  name:
+    type: string
+    description: The player's username.

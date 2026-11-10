@@ -1,0 +1,8 @@
+allOf:
+  - $ref: SimpleRecord.yaml
+    description: A record achieved on a given level, assigned to a level.
+  - type: object
+    properties:
+      player:
+        $ref: SimplePlayer.yaml
+        description: The player who achieved the record.

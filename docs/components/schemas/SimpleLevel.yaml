@@ -1,0 +1,12 @@
+type: object
+description: A minimized representation of a level, used in situations where full level information is not needed.
+properties:
+  level_id:
+    type: number
+    description: The in-game level id.
+  name:
+    type: string
+    description: The in-game level name.
+  placement:
+    type: number
+    description: The placement of the level on the list.

@@ -1,0 +1,23 @@
+operationId: getLevelById
+summary: Get Level by ID
+security: []
+parameters:
+  - name: id
+    in: path
+    required: true
+    schema:
+      type: number
+responses:
+  "200":
+    description: OK
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            error:
+              type: boolean
+              default: false
+            data:
+              $ref: ../components/schemas/Level.yaml
+              description: The requested level.

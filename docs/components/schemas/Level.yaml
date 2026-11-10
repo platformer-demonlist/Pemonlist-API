@@ -1,0 +1,17 @@
+allOf:
+  - $ref: SimpleLevel.yaml
+    description: A level verified and placed on the list.
+  - type: object
+    properties:
+      creator:
+        type: string
+        description: The in-game level creator's name.
+      points:
+        type: number
+        description: The leaderboard points that a completion will reward.
+      verifier:
+        $ref: SimplePlayer.yaml
+        description: The verifier, or first victor, of the level.
+      video_id:
+        type: string
+        description: The verification's YouTube video ID.

@@ -1,0 +1,41 @@
+openapi: 3.1.0
+info:
+  version: 2.0.0
+  title: Pemonlist API
+  description: The API used for interacting with Pemonlist.
+  termsOfService: https://pemonlist.com/terms
+  license:
+    name: GNU Affero General Public License v3.0 or later
+    url: https://www.gnu.org/licenses/agpl-3.0.txt
+servers:
+  - url: https://pemonlist.com/api/v2
+    description: Production server
+# TODO - add 4XX paths
+paths:
+  /levels:
+    get:
+      $ref: ./paths/getLevels.yaml
+  /levels/{id}:
+    get:
+      $ref: ./paths/getLevelById.yaml
+  /levels/{id}/records:
+    get:
+      $ref: ./paths/getRecordsByLevelId.yaml
+  /players:
+    get:
+      $ref: ./paths/getPlayers.yaml
+  /players/{username}:
+    get:
+      $ref: ./paths/getPlayerByUsername.yaml
+  /players/{username}/records:
+    get:
+      $ref: ./paths/getRecordsByPlayerUsername.yaml
+  /players/{username}/verifications:
+    get:
+      $ref: ./paths/getVerificationsByPlayerUsername.yaml
+components:
+  securitySchemes: 
+    jwt:
+      type: http
+      description: Generated on log-in.
+      scheme: bearer

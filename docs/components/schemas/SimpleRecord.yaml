@@ -1,0 +1,18 @@
+type: object
+description: A minimized representation of a record, used in situations where full record information is not needed.
+properties:
+  timestamp_string:
+    type: string
+    description: The record's completion time, formatted to `HH:MM:SS.MS`.
+  timestamp_milliseconds:
+    type: number
+    description: The record's completion time, formatted to milliseconds.
+  device:
+    $ref: Device.yaml
+    description: The record's completion platform.
+  rank:
+    type: number
+    description: The record's rank among all records on the level.
+  video_id:
+    type: string
+    description: The record's YouTube video ID, or a link to the completion footage.

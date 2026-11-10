@@ -1,0 +1,6 @@
+# TODO - this needs more entries
+type: string
+description: A player's device used to achieve a record.
+enum:
+  - Desktop
+  - Mobile

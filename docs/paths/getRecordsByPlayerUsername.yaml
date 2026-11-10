@@ -1,0 +1,38 @@
+operationId: getRecordsByPlayerUsername
+summary: Get Records by Player Username
+security: []
+parameters:
+  - name: username
+    in: path
+    required: true
+    schema:
+      type: string
+  - name: page
+    in: query
+    required: false
+    schema:
+      type: number
+      minimum: 1
+      default: 1
+  - name: limit
+    in: query
+    required: false
+    schema:
+      type: number
+      minimum: 0
+      default: 10
+responses:
+  "200":
+    description: OK
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            error:
+              type: boolean
+              default: false
+            data:
+              type: array
+              items:
+                $ref: ../components/schemas/PlayerRecord.yaml
