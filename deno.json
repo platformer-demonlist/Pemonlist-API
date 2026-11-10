@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "build": "deno x -y -p @redocly/cli redocly build-docs -o ./docs/dist/redoc-static.html --inlineBundle ./docs/openapi.yaml",
+    "run": "deno task build && deno run -A main.ts"
+  },
+  "imports": {
+    "fastify": "npm:fastify@^5.12.8"
+  }
+}
